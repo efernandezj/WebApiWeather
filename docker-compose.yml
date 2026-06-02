@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 version: '3.8'
 services:
   weatherapi:
@@ -18,24 +18,3 @@ services:
     container_name: mongodb
     ports:
       - "27017:27017"
-=======
-version: '3.8'
-services:
-  weatherapi:
-    build:
-      context: .
-      dockerfile: WeatherApp.Api/Dockerfile
-    container_name: weatherapi
-    ports:
-      - "5000:80"
-    depends_on:
-      - mongodb
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-
-  mongodb:
-    image: mongo:6.0
-    container_name: mongodb
-    ports:
-      - "27017:27017"
->>>>>>> 6eb0b6dd6c4f656c497cbfdde29a9a8e40268495
